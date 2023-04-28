@@ -312,7 +312,7 @@ class FileTransfer:
         # 去除扩展名后的文件名
         file_pre_name = os.path.splitext(file_name)[0]
         file_list = PathUtils.get_dir_level1_files(dir_name, RMT_AUDIO_TRACK_EXT)
-        pending_file_list = [file for file in file_list if file_pre_name == os.path.splitext(file)[0]]
+        pending_file_list = [file for file in file_list if file_pre_name == os.path.splitext(os.path.basename(file))[0]]
         if len(pending_file_list) == 0:
             log.debug("【Rmt】%s 目录下没有找到匹配的音轨文件..." % dir_name)
         else:
