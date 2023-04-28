@@ -41,7 +41,7 @@ from app.speedlimiter import SpeedLimiter
 from app.utils import StringUtils, EpisodeFormat, RequestUtils, PathUtils, \
     SystemUtils, ExceptionUtils, Torrent
 from app.utils.types import RmtMode, OsType, SearchType, DownloaderType, SyncType, MediaType, MovieTypes, TvTypes
-from config import RMT_MEDIAEXT, TMDB_IMAGE_W500_URL, RMT_SUBEXT, Config
+from config import RMT_MEDIAEXT, TMDB_IMAGE_W500_URL, RMT_SUBEXT, RMT_AUDIO_TRACK_EXT, Config
 from web.backend.search_torrents import search_medias_for_web, search_media_by_message
 from web.backend.web_utils import WebUtils
 
@@ -3988,6 +3988,8 @@ class WebAction:
                     elif "MEDIAFILE" in ft and f".{str(ext).lower()}" in RMT_MEDIAEXT:
                         flag = True
                     elif "SUBFILE" in ft and f".{str(ext).lower()}" in RMT_SUBEXT:
+                        flag = True
+                    elif "AUDIOTRACKFILE" in ft and f".{str(ext).lower()}" in RMT_AUDIO_TRACK_EXT:
                         flag = True
                     if flag:
                         r.append({
