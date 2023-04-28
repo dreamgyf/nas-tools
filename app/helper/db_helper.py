@@ -1968,7 +1968,7 @@ class DbHelper:
                     "OVER_EDITION": int(item.get("over_edition")) if str(item.get("over_edition")).isdigit() else 0,
                     "SITES": json.dumps(item.get("sites")),
                     "FILTER_ARGS": json.dumps(item.get("filter_args")),
-                    "NOTE": ""
+                    "NOTE": json.dumps(item.get("note"))
                 }
             )
         else:
@@ -1989,6 +1989,7 @@ class DbHelper:
                 OVER_EDITION=item.get("over_edition"),
                 SITES=json.dumps(item.get("sites")),
                 FILTER_ARGS=json.dumps(item.get("filter_args")),
+                NOTE=json.dumps(item.get("note")),
                 PROCESS_COUNT='0'
             ))
 
