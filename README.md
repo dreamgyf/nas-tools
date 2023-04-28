@@ -5,11 +5,11 @@
 [![GitHub forks](https://img.shields.io/github/forks/jxxghp/nas-tools?style=plastic)](https://github.com/jxxghp/nas-tools/network/members)
 [![GitHub issues](https://img.shields.io/github/issues/jxxghp/nas-tools?style=plastic)](https://github.com/jxxghp/nas-tools/issues)
 [![GitHub license](https://img.shields.io/github/license/jxxghp/nas-tools?style=plastic)](https://github.com/jxxghp/nas-tools/blob/master/LICENSE.md)
-[![Docker pulls](https://img.shields.io/docker/pulls/jxxghp/nas-tools?style=plastic)](https://hub.docker.com/r/jxxghp/nas-tools)
-[![Platform](https://img.shields.io/badge/platform-amd64/arm64-pink?style=plastic)](https://hub.docker.com/r/jxxghp/nas-tools)
+[![Docker pulls](https://img.shields.io/docker/pulls/dreamgyf/nas-tools?style=plastic)](https://hub.docker.com/r/dreamgyf/nas-tools)
+[![Platform](https://img.shields.io/badge/platform-amd64/arm64-pink?style=plastic)](https://hub.docker.com/r/dreamgyf/nas-tools)
 
 
-Docker：https://hub.docker.com/repository/docker/jxxghp/nas-tools
+Docker：https://hub.docker.com/repository/docker/dreamgyf/nas-tools
 
 TG频道：https://t.me/nastool
 
@@ -46,7 +46,7 @@ API: http://localhost:3000/api/v1/
 ## 安装
 ### 1、Docker
 ```
-docker pull jxxghp/nas-tools:latest
+docker pull dreamgyf/nas-tools:latest
 ```
 教程见 [这里](docker/readme.md) 。
 
@@ -55,7 +55,7 @@ docker pull jxxghp/nas-tools:latest
 ### 2、本地运行
 python3.10版本，需要预安装cython，如发现缺少依赖包需额外安装
 ```
-git clone -b master https://github.com/jxxghp/nas-tools --recurse-submodule 
+git clone -b master https://github.com/dreamgyf/nas-tools --recurse-submodule 
 python3 -m pip install -r requirements.txt
 export NASTOOL_CONFIG="/xxx/config/config.yaml"
 nohup python3 run.py & 
